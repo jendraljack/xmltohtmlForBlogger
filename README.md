@@ -8,11 +8,17 @@ kemungkinan hasil impor dengan jumlah awal akan lebih kecil dari semua posting a
 
 untuk mendapat blog.xml , Anda pergi ke blogger Anda
 pergi ke setting > backup
-
-edit berkas .xml, cari tag </entry><entry>
-  lalu replace all jadi </entry>#####<entry>
+#langkah 1
+edit berkas .xml, cari tag kind#post'/><title
+  lalu replace all jadi kind#post'/>#####<title
   *ingat*
-  # = 23
+  \# = 23
  newline = 0a
+  #langkah 2
+  karena akan membuat berkas baru dari newline
+  maka kita akan replace menggunakan hex editor
+  cari 2323232323 replace semua jadi 232323230a
+  lalu simpan
   
-  karena 
+#langkah 3
+  eksekusi shell dumpToText.sh
